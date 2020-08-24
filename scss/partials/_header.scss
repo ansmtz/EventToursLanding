@@ -1,0 +1,143 @@
+.header {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.logo {
+    flex: 0 0 10%;
+    #inner-circle {
+        animation: logoAnimation .6s ease-out backwards .3s;
+    }
+    #outer-circle {
+        animation: logoAnimation .6s ease-out backwards .6s;
+    }
+}
+.signup {
+    display: none;
+}
+.toggle-menu {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+#toggle-menu-icon {
+    fill: $primary-color;
+}
+
+
+.signup .register-btn {
+    margin-left: 1rem;
+}
+.menu {
+    display: none;
+    &__link {
+        color: $content-color-light-200;
+        position: relative;
+        &::after {
+            content: "";
+            width: 100%;
+            height: 4px;
+            background-color: $content-color-light-200;
+            position: absolute;
+            bottom: -14%;
+            left:0;
+            display: block;
+            transform: scale(0);
+            transform-origin: center center;
+            transition: all .4s ease-out;
+        }
+        &:hover {
+            color: $content-color-light-300
+        }
+        &:hover::after {
+            transform: scale(1);     
+        }
+        &--active {
+            font-weight: 500;
+            color: $content-color;
+        }
+        
+    }
+}
+
+
+.menu.opened, 
+.signup.opened {
+    display: flex;
+    flex-direction: column;
+    flex: 100%;
+    margin-top: 1rem;
+    &__item {
+        padding: 2rem 0;
+    }
+}
+.signup.opened {
+    align-items: flex-start;
+    order: 6;
+    > * {
+        margin: 1rem 0;
+    }
+}
+
+
+@media (min-width: 461px){
+    .toggle-menu {
+        display: none;
+    }
+
+    .signup {
+        display: flex;
+        flex: 1 80%;
+        justify-content: flex-end;
+    }
+    
+    .menu {
+        display: flex;
+        flex: 100%;
+        margin-top: 1rem;
+        overflow-x: auto;
+        &__list {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__item {
+            padding: 2rem 1rem;
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    .header {
+        flex-wrap: nowrap;
+    }
+    .menu {
+        flex: 100;
+        overflow: initial;
+        margin: 0;
+        justify-content: flex-end;
+    }
+    .signup {
+        flex: 20%;
+         order: 5;
+    }
+}
+
+@keyframes logoAnimation {
+    0% {
+        scale: 0;
+        opacity: 0;
+    }
+
+    100% {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+
+
