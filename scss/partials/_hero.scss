@@ -1,0 +1,63 @@
+.hero {
+    @include container;
+}
+
+.hero__image img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
+
+.line {
+    display: block;
+    max-width: 100px;
+    height: 3px;
+    background-color: $content-color;
+    margin-bottom: 2rem;
+}
+
+.explore-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    display: block;
+    font-family: inherit;
+    padding: 1rem .5rem;
+    border: .8px solid $content-color-light-100;
+    border-radius: .5rem;
+    font-size: 1rem;
+} 
+
+.input::placeholder{
+    color: $content-color-light-100;
+    font-size: 1rem;
+}
+
+.input:focus {
+    outline: none;
+    border: .9px solid $content-color-light-300
+}
+
+.input + .input {
+    margin-top: 1rem;
+}
+
+.explore-btn {
+    margin-top: 2rem;
+    align-self: flex-end;
+}
+
+.select-wrapper {
+    position: relative;
+}
+.input--select {
+    cursor: pointer;
+    width: 100%;
+}
+
+
+
+
+

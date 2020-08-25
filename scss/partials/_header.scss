@@ -35,6 +35,9 @@
 }
 .menu {
     display: none;
+    &__item {
+        padding: 1rem 0;
+    }
     &__link {
         color: $content-color-light-200;
         position: relative;

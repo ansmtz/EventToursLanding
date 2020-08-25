@@ -30,8 +30,33 @@ a {
   text-decoration: none;
 }
 
+input[type=text] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.title {
+  font-size: 2.3rem;
+  font-family: 'Playfair Display', serif;
+  color: #202336;
+  line-height: 3rem;
+  margin-bottom: 3rem;
+}
+
+.subtitle {
+  color: #202336;
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
 .secondary-btn {
   display: block;
+  border: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
   font-family: inherit;
   color: #FB8F1D;
   border: 1px solid #FB8F1D;
@@ -42,6 +67,10 @@ a {
 
 .primary-btn {
   display: block;
+  border: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
   font-family: inherit;
   color: #fff;
   background-color: #FB8F1D;
@@ -103,6 +132,10 @@ a {
 
 .menu {
   display: none;
+}
+
+.menu__item {
+  padding: 1rem 0;
 }
 
 .menu__link {
@@ -257,5 +290,88 @@ a {
     scale: 1;
     opacity: 1;
   }
+}
+
+.hero {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.hero__image img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+.line {
+  display: block;
+  max-width: 100px;
+  height: 3px;
+  background-color: #202336;
+  margin-bottom: 2rem;
+}
+
+.explore-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.input {
+  display: block;
+  font-family: inherit;
+  padding: 1rem .5rem;
+  border: 0.8px solid #AFB0B9;
+  border-radius: .5rem;
+  font-size: 1rem;
+}
+
+.input::-webkit-input-placeholder {
+  color: #AFB0B9;
+  font-size: 1rem;
+}
+
+.input:-ms-input-placeholder {
+  color: #AFB0B9;
+  font-size: 1rem;
+}
+
+.input::-ms-input-placeholder {
+  color: #AFB0B9;
+  font-size: 1rem;
+}
+
+.input::placeholder {
+  color: #AFB0B9;
+  font-size: 1rem;
+}
+
+.input:focus {
+  outline: none;
+  border: 0.9px solid #4A4C53;
+}
+
+.input + .input {
+  margin-top: 1rem;
+}
+
+.explore-btn {
+  margin-top: 2rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.input--select {
+  cursor: pointer;
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
