@@ -329,6 +329,7 @@ input[type=text] {
   border: 0.8px solid #AFB0B9;
   border-radius: .5rem;
   font-size: 1rem;
+  background-color: #fff;
 }
 
 .input::-webkit-input-placeholder {
