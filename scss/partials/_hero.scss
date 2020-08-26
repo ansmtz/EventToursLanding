@@ -1,5 +1,6 @@
 .hero {
     @include container;
+    padding: $section-padding;
 }
 
 .hero__image img {
@@ -67,7 +68,7 @@
         order: -1;
     }
     .hero__image {
-        flex: 0 0 40%;
+        flex: 0 0 60%;
     }
 }
 

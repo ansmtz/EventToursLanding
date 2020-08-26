@@ -1,0 +1,21 @@
+.about {
+    @include container;
+    padding: $section-padding;
+}
+.about__info {
+    display: flex;
+    flex-direction: column;
+}
+.learn-more-btn {
+    margin-top: 2rem;
+    align-self: flex-end;
+}
+
+@media (min-width: 460px){
+    .about {
+        display: flex;
+    }
+    .about__info {
+        flex: 0 0 50%;
+    }
+}
