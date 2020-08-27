@@ -14,6 +14,7 @@
 @media (min-width: 460px){
     .about {
         display: flex;
+        justify-content: space-between;
     }
     .about__info {
         flex: 0 0 50%;

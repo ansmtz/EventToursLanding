@@ -1,0 +1,38 @@
+.stories {
+    @include container;
+    padding: $section-padding;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+}
+.cards {
+    display: flex;
+    overflow-x: scroll;
+}
+.story {
+    display: flex;
+    flex:0 0 80%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    &__image img {
+        border-radius: 1.2rem 1.2rem 0 0;
+        height: 200px;
+    }
+    &__title {
+        color: $content-color;
+        margin: 1rem 0 1.5rem 0;
+    }
+    &__descr {
+        margin-bottom: 1.8rem;
+    }
+    &__read-more {
+        color: $accent-color-1;
+    }
+}
+.story + .story {
+    margin-left: 1rem;
+}
